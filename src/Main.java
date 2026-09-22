@@ -1,6 +1,7 @@
 public class Main {
     private static Pr1 p1 = new Pr1();
     private static Pr2 p2 = new Pr2();
+    private static HowMany hm = new HowMany();
 
     public static void main(String[] args) {
         /*System.out.println("Практическая 1");
@@ -12,6 +13,6 @@ public class Main {
         p1.punkt7();*/
 
         System.out.println("Практическая 2");
-
+        hm.main();
     }
 }
