@@ -20,7 +20,7 @@ public class Pr1 {
         ln = scanner.nextInt();
         cur = ln;
         while (cur > 0) {
-            System.out.print("Введите " + Integer.toString(ln*2-cur) + " элемент: ");
+            System.out.print("Введите " + Integer.toString(ln-cur) + " элемент: ");
             int element = scanner.nextInt();
             arr = addToArr(arr, element);
             sum += element;
