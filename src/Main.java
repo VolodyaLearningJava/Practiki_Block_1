@@ -19,9 +19,11 @@ public class Main {
         poker.StartGame();
         hm.main();*/
 
-
         System.out.println("Практическая 3");
         //p3.mr1();
         //p3.mr2();
+        //p3.mr3();
+        //p3.mr4();
+        p3.obolochki();
     }
 }
