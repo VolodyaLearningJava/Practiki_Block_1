@@ -1,10 +1,10 @@
 public class Main {
     private static Pr1 p1 = new Pr1();
     private static Pr2 p2 = new Pr2();
-    private static Pr3 p3 = new Pr3();
-    private static Pr4 p4 = new Pr4();
     private static HowMany hm = new HowMany();
     private static PokerTable poker = new PokerTable();
+    private static Pr3 p3 = new Pr3();
+    private static Pr4 p4 = new Pr4();
 
     public static void main(String[] args) {
         /*System.out.println("Практическая 1");
@@ -27,8 +27,7 @@ public class Main {
         p3.mr4();
         p3.obolochki();*/
 
-        System.out.println("Практическая 4");
-        p4.task1();
-        p4.task4();
+        /*System.out.println("Практическая 4");
+        p4.task1();*/
     }
 }
