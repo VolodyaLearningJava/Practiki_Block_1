@@ -14,14 +14,13 @@ public class Main {
         p1.punkt6();
         p1.punkt7();*/
 
-        //System.out.println("Практическая 2");
-        //p2.punkt4();
-        //p2.punkt8();
+        /*System.out.println("Практическая 2");
+        p2.punkt8();
         poker.StartGame();
-        //hm.main();
+        hm.main();*/
 
 
-        //System.out.println("Практическая 3");
+        System.out.println("Практическая 3");
         //p3.mr1();
         //p3.mr2();
     }

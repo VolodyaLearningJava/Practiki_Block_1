@@ -4,7 +4,7 @@ public class Pr2 {
     private Author TestAuthor = new Author("Vladimir", "p04ta@edu.mirea.ru", 'm');
     private Ball TestBall = new Ball();
 
-    public void punkt4() {
+    public void punkt4() { // Вводить компьютеры с клавиатуры слишком долго, система поиска реализована в приватных классах Computer и ComputerShop, однако у автора имеются сомнения касаемо корректности/элегантности подхода. Задача переносится до изучения структур, более подходящих для реализации подобных поисковых систем
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите количество компьютеров в магазине: ");
         int amount = scanner.nextInt();
@@ -120,6 +120,34 @@ public class Pr2 {
 
         public int getLn() {
             return ln; }
+    }
+
+    private class Dog {
+        private int age;
+        private String name;
+        public Dog(String _name, int _age) {
+            this.age = _age;
+            this.name = _name;
+        }
+        public void setAge(int _age) { this.age = _age; }
+        public void setName(String _name) { this.name = _name; }
+        public int getAge() { return this.age; }
+        public String getName() { return this.name; }
+
+        public int getAgeInHumanYears() { return this.age * 7; }
+
+        public String toSrting() { return "Имя: " + name + ", возраст: " + Integer.toString(age); }
+    }
+    private class DogHouse {
+        private Dog[] dogs = {};
+
+        public void addDogs(Dog[] newDogs) {
+            Dog[] newArr = new Dog[dogs.length + newDogs.length];
+            for (int i=0; i < dogs.length; i++)
+                newArr[i] = dogs[i];
+            for (int i=0; i < newDogs.length; i++)
+                newArr[dogs.length + i] = newDogs[i];
+        }
     }
 
     private class Computer {
