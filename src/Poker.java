@@ -1,9 +1,10 @@
 import java.util.*;
 public class Poker {
     private Card[] deck;
+    public Card[] getDeck() { return this.deck; }
 
     public Poker() {
-        this.deck = new Card[58];
+        this.deck = new Card[54];
 
         for (int i=0; i<4; i++){
             CardSuit curSuit;
@@ -25,8 +26,8 @@ public class Poker {
                 this.deck[13*i + j] = new Card(j, curSuit);
             }
         }
-        this.deck[56] = new Card(0, CardSuit.Joker);
-        this.deck[57] = new Card(1, CardSuit.Joker);
+        this.deck[52] = new Card(0, CardSuit.Joker);
+        this.deck[53] = new Card(1, CardSuit.Joker);
         shuffleDeck();
     }
     private void shuffleDeck() {
@@ -38,6 +39,26 @@ public class Poker {
             deck[index] = deck[i];
             deck[i] = a;
         }
+    }
+
+    public Card[] grantCards(int n) {
+        if (n > deck.length) {
+            System.out.println("Deck size violation!");
+            return null;
+        }
+
+        Card[] cards = new Card[n];
+        Card[] newDeck = new Card[deck.length-n];
+        for (int i=0; i < deck.length; i++){
+            if (i<n) {
+                cards[i] = deck[i];
+            }
+            else {
+                newDeck[i-n] = deck[i];
+            }
+        }
+        this.deck = newDeck;
+        return cards;
     }
 
     public String cardToString(Card card) {
@@ -66,7 +87,20 @@ public class Poker {
                 return str+" of "+card.suit.name();
         }
     }
-
+    public void printDeck(){
+        System.out.print(cardToString(deck[0]));
+        for (int i=1; i < deck.length; i++){
+            System.out.print("|" + cardToString(deck[i]));
+        }
+        System.out.println();
+    }
+    public void printDeck(Card[] cards){
+        System.out.print(cardToString(cards[0]));
+        for (int i=1; i < cards.length; i++){
+            System.out.print("|" + cardToString(cards[i]));
+        }
+        System.out.println();
+    }
 
     public enum CardSuit { Spades, Clubs, Hearts, Diamonds, Joker }
     public class Card {

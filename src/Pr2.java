@@ -10,6 +10,21 @@ public class Pr2 {
         int amount = scanner.nextInt();
     }
 
+    public void punkt8() {
+        String[] strs = new String[11];
+        for (int i=0; i < strs.length; i++)
+            strs[i] = Integer.toString(i);
+
+        for (int i=0; i < strs.length / 2; i++) {
+            String cur = strs[i];
+            strs[i] = strs[strs.length - 1 - i];
+            strs[strs.length - 1 - i] = cur;
+        }
+        for (int i=0; i < strs.length; i++) {
+            System.out.print(strs[i] + " ");
+        }
+    }
+
     private class Author {
         private String name, email;
         private char gender;

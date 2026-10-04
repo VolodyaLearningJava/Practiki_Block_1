@@ -3,6 +3,7 @@ public class Main {
     private static Pr2 p2 = new Pr2();
     private static Pr3 p3 = new Pr3();
     private static HowMany hm = new HowMany();
+    private static PokerTable poker = new PokerTable();
 
     public static void main(String[] args) {
         /*System.out.println("Практическая 1");
@@ -13,11 +14,14 @@ public class Main {
         p1.punkt6();
         p1.punkt7();*/
 
-        /*System.out.println("Практическая 2");
-        hm.main();*/
+        //System.out.println("Практическая 2");
+        //p2.punkt4();
+        //p2.punkt8();
+        poker.StartGame();
+        //hm.main();
 
 
-        System.out.println("Практическая 3");
+        //System.out.println("Практическая 3");
         //p3.mr1();
         //p3.mr2();
     }
