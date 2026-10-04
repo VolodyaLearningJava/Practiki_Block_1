@@ -2,6 +2,7 @@ public class Main {
     private static Pr1 p1 = new Pr1();
     private static Pr2 p2 = new Pr2();
     private static Pr3 p3 = new Pr3();
+    private static Pr4 p4 = new Pr4();
     private static HowMany hm = new HowMany();
     private static PokerTable poker = new PokerTable();
 
@@ -19,11 +20,15 @@ public class Main {
         poker.StartGame();
         hm.main();*/
 
-        System.out.println("Практическая 3");
-        //p3.mr1();
-        //p3.mr2();
-        //p3.mr3();
-        //p3.mr4();
-        p3.obolochki();
+        /*System.out.println("Практическая 3");
+        p3.mr1();
+        p3.mr2();
+        p3.mr3();
+        p3.mr4();
+        p3.obolochki();*/
+
+        System.out.println("Практическая 4");
+        p4.task1();
+        p4.task4();
     }
 }
