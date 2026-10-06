@@ -5,6 +5,7 @@ public class Main {
     private static PokerTable poker = new PokerTable();
     private static Pr3 p3 = new Pr3();
     private static Pr4 p4 = new Pr4();
+    private static Pr7 p7 = new Pr7();
 
     public static void main(String[] args) {
         /*System.out.println("Практическая 1");
@@ -29,5 +30,9 @@ public class Main {
 
         /*System.out.println("Практическая 4");
         p4.task1();*/
+
+        System.out.println("Практическая 7");
+        p7.task4();
+        p7.task5();
     }
 }
