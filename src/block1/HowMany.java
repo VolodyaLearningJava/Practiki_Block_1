@@ -1,8 +1,10 @@
+package block1;
+
 import java.util.Scanner;
 
 public class HowMany {
     public static void main(){
-        System.out.print("Ввод в HowMany: ");
+        System.out.print("Ввод в Block1.HowMany: ");
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
         str = " " + str;

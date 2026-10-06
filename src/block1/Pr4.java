@@ -1,5 +1,7 @@
+package block1;
+
 public class Pr4 {
-    public void task1() {
+    public static void task1() {
         // 1
         Seasons myFavoriteSeason = Seasons.Winter;
         System.out.println("name: " + myFavoriteSeason.name() + ", order: " + myFavoriteSeason.ordinal());
@@ -19,7 +21,7 @@ public class Pr4 {
         }
     }
     // 2
-    private void printFavoriteSeason(Seasons season) {
+    private static void printFavoriteSeason(Seasons season) {
         switch (season) {
             case Winter -> System.out.println("Я люблю зиму");
             case Spring -> System.out.println("Я люблю аллергию");
@@ -28,7 +30,7 @@ public class Pr4 {
         }
     }
     // 5
-    private String getDescription(Seasons season) {
+    private static String getDescription(Seasons season) {
         switch (season) {
             case Winter: return "Холодное время года";
             case Spring: return "Период цветения";

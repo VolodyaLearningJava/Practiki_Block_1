@@ -1,38 +1,42 @@
 public class Main {
-    private static Pr1 p1 = new Pr1();
-    private static Pr2 p2 = new Pr2();
-    private static HowMany hm = new HowMany();
-    private static PokerTable poker = new PokerTable();
-    private static Pr3 p3 = new Pr3();
-    private static Pr4 p4 = new Pr4();
-    private static Pr7 p7 = new Pr7();
+    private static block1.PokerTable poker = new block1.PokerTable();
 
     public static void main(String[] args) {
-        /*System.out.println("Практическая 1");
-        p1.punkt3();
-        p1.punkt4while();
-        //p1.punkt4dowhile();
-        p1.punkt5(args);
-        p1.punkt6();
-        p1.punkt7();*/
+        // Блок 1
+        block1(args);
+        // Блок 2
+        block2(args);
+    }
+    private static void block1(String[] args) {
+        System.out.println("Практическая 1");
+        block1.Pr1.punkt3();
+        block1.Pr1.punkt4while();
+        //block1.Pr1.punkt4dowhile();
+        block1.Pr1.punkt5(args);
+        block1.Pr1.punkt6();
+        block1.Pr1.punkt7();
 
-        /*System.out.println("Практическая 2");
-        p2.punkt8();
+        System.out.println("Практическая 2");
+        block1.Pr2.punkt8();
         poker.StartGame();
-        hm.main();*/
+        block1.HowMany.main();
 
-        /*System.out.println("Практическая 3");
-        p3.mr1();
+        System.out.println("Практическая 3");
+        block1.Pr3.mr1();
+        block1.Pr3 p3 = new block1.Pr3();
         p3.mr2();
-        p3.mr3();
-        p3.mr4();
-        p3.obolochki();*/
+        block1.Pr3.mr3();
+        block1.Pr3.mr4();
+        block1.Pr3.obolochki();
 
-        /*System.out.println("Практическая 4");
-        p4.task1();*/
+        System.out.println("Практическая 4");
+        block1.Pr4.task1();
 
         System.out.println("Практическая 7");
-        p7.task4();
-        p7.task5();
+        block1.Pr7.task4();
+        block1.Pr7.task5();
+    }
+    private static void block2(String[] args) {
+
     }
 }

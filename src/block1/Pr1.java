@@ -1,3 +1,5 @@
+package block1;
+
 import java.util.Scanner;
 
 public class Pr1 {

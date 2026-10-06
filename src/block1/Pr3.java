@@ -1,6 +1,8 @@
+package block1;
+
 import java.util.*;
 public class Pr3 {
-    public void mr1(){
+    public static void mr1(){
         double[] arr = new double[10];
         Random rnd = new Random();
         for (int i=0; i<arr.length; i++){
@@ -22,7 +24,7 @@ public class Pr3 {
         tester.printCircles();
     }
 
-    public void mr3(){
+    public static void mr3(){
         Random rnd = new Random();
         int[] arr = new int[4];
         for (int i=0; i < arr.length; i++)
@@ -37,7 +39,7 @@ public class Pr3 {
         else
             System.out.println("Массив НЕ является строго возрастающей последовательностью");
     }
-    private boolean strogoUp(int[] arr) {
+    private static boolean strogoUp(int[] arr) {
         for (int i=0; i < arr.length - 1; i++) {
             if (arr[i] >= arr[i+1])
                 return false;
@@ -45,7 +47,7 @@ public class Pr3 {
         return true;
     }
 
-    public void mr4(){
+    public static void mr4(){
         Scanner scanner = new Scanner(System.in);
         Random rnd = new Random();
         int n;
@@ -75,7 +77,7 @@ public class Pr3 {
             System.out.println();
         }
     }
-    private int[] arrCh(int[] arr) {
+    private static int[] arrCh(int[] arr) {
         int ch = 0, j=0;
         for (int i=0; i<arr.length; i++) {
             if (arr[i] % 2 == 0)
@@ -91,7 +93,7 @@ public class Pr3 {
         return chetnie;
     }
 
-    public void obolochki() {
+    public static void obolochki() {
         // Пункт 1
         double doubleA = Double.valueOf(5);
         // Пункт 2
@@ -110,7 +112,7 @@ public class Pr3 {
         public double convertToUnits(double value);
     }
 
-    private class Rub implements Converatble { // Рубль берём за unit
+    private static class Rub implements Converatble { // Рубль берём за unit
         public double convertFromUnits(double units) {
             return units;
         }
@@ -118,7 +120,7 @@ public class Pr3 {
             return value;
         }
     }
-    private class Usd implements Converatble {
+    private static class Usd implements Converatble {
         public double convertFromUnits(double units) {
             return units * 80;
         }
@@ -126,7 +128,7 @@ public class Pr3 {
             return value / 80;
         }
     }
-    private class Euro implements Converatble {
+    private static class Euro implements Converatble {
         public double convertFromUnits(double units) {
             return units * 100;
         }

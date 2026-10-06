@@ -1,16 +1,18 @@
+package block1;
+
 import java.util.Scanner;
 
 public class Pr2 {
     private Author TestAuthor = new Author("Vladimir", "p04ta@edu.mirea.ru", 'm');
     private Ball TestBall = new Ball();
 
-    public void punkt4() { // Вводить компьютеры с клавиатуры слишком долго, система поиска реализована в приватных классах Computer и ComputerShop, однако у автора имеются сомнения касаемо корректности/элегантности подхода. Задача переносится до изучения структур, более подходящих для реализации подобных поисковых систем
+    public static void punkt4() { // Вводить компьютеры с клавиатуры слишком долго, система поиска реализована в приватных классах Computer и ComputerShop, однако у автора имеются сомнения касаемо корректности/элегантности подхода. Задача переносится до изучения структур, более подходящих для реализации подобных поисковых систем
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите количество компьютеров в магазине: ");
         int amount = scanner.nextInt();
     }
 
-    public void punkt8() {
+    public static void punkt8() {
         String[] strs = new String[11];
         for (int i=0; i < strs.length; i++)
             strs[i] = Integer.toString(i);

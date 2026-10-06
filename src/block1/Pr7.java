@@ -1,8 +1,10 @@
+package block1;
+
 import java.lang.Math;
 import java.util.Scanner;
 
 public class Pr7 {
-    public void task4() {
+    public static void task4() {
         System.out.println("Пример математики: " + MathFunc.calculateCircleLength(1));
     }
     private interface MathCalculable {
@@ -28,7 +30,7 @@ public class Pr7 {
         }
     }
 
-    public void task5() {
+    public static void task5() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите строку: ");
         String str = scanner.nextLine();
