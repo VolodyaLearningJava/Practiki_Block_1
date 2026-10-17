@@ -6,7 +6,7 @@ public class Pr9 {
     }
 
     public static void task1() {
-        int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+        int[] arr = {0, 1, 0, 3, 2, 1, 10, 9, 8};
         arr = insertionSort(arr);
         for (int i = 0; i < arr.length; i++)
             System.out.print(arr[i] + " ");
@@ -18,15 +18,18 @@ public class Pr9 {
             return arr;
         int[] newArr = new int[arr.length-1];
         for (int i=0; i < newArr.length; i++) { newArr[i] = arr[i]; }
-        System.out.println(newArr.length);
         newArr = insertionSort(newArr);
 
         if (arr[arr.length-1] < newArr[newArr.length-1]) {
             int c = arr[arr.length-1];
             arr[arr.length-1] = newArr[newArr.length-1];
             newArr[newArr.length-1] = c;
+
+            //System.out.println("Element " + (newArr.length) + ", bring back " + c);
+            newArr = insertionSort(newArr);
         }
         for (int i=0; i < newArr.length; i++) { arr[i] = newArr[i]; }
+        //System.out.println("Go fwd");
         return arr;
     }
 }
