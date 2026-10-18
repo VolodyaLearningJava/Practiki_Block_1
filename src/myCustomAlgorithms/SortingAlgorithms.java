@@ -10,7 +10,7 @@ public class SortingAlgorithms<T extends Comparable<T>> {
         for (int i=0; i < arr.size()-1; i++) { newArr.add(arr.get(i)); }
         newArr = insertionSort(newArr);
 
-        if (arr.getLast().compareTo(newArr.getLast()) < 0) {//((arr[arr.length-1] < newArr[newArr.length-1])) {
+        if (arr.getLast().compareTo(newArr.getLast()) < 0) {
             T temp = arr.getLast();
             arr.set(arr.size()-1, newArr.getLast());
             newArr.set(newArr.size()-1, temp);
@@ -45,4 +45,30 @@ public class SortingAlgorithms<T extends Comparable<T>> {
         return result;//quickSort(less) + equal + quickSort(greater);
     }
 
+    public ArrayList<T> mergeSort(ArrayList<T> arr) {
+        if (arr.size() <= 1)
+            return arr;
+        ArrayList<T> left = new ArrayList<>(), right = new ArrayList<>(), result = new ArrayList<>();
+        for (int i=0; i < arr.size()/2; i++)
+            left.add(arr.get(i));
+        for (int i=arr.size()/2; i < arr.size(); i++)
+            right.add(arr.get(i));
+
+        left = mergeSort(left);
+        right = mergeSort(right);
+
+        while (!left.isEmpty() && !right.isEmpty()) {
+            if (left.getFirst().compareTo(right.getFirst()) <= 0) {
+                result.add(left.getFirst());
+                left.removeFirst();
+            }
+            else {
+                result.add(right.getFirst());
+                right.removeFirst();
+            }
+        }
+        result.addAll(left);
+        result.addAll(right);
+        return result;
+    }
 }

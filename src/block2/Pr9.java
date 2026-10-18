@@ -28,7 +28,7 @@ public class Pr9 {
         ArrayList<Integer> list = new ArrayList<>();
         list.addAll(Arrays.asList(arr));
 
-        list = myIntSort.quickSort(list);
+        list = myIntSort.mergeSort(list);
 
         for (int i = 0; i < list.size(); i++)
             System.out.print(list.get(i) + " ");
