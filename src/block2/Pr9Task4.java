@@ -13,9 +13,9 @@ public class Pr9Task4 {
 
         @Override
         public int compareTo(ComparTest obj) {
-            if (this.value < obj.getValue())
+            if (obj.getValue() < this.value)
                 return -1;
-            if (this.value > obj.getValue())
+            if (obj.getValue() > this.value)
                 return 1;
             return 0;
         }

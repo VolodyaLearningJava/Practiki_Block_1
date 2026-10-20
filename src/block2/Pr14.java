@@ -1,5 +1,7 @@
 package block2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Pr14 {
@@ -62,24 +64,28 @@ public class Pr14 {
         return true;
     }
     // С заданием 8 не справился, спросить у преподавателя
-    /*public static void task8() {
+    public static void task8() {
         Integer[] arr = {0, 1, 0, 3, 2, 1, 10, 9, 8};
         ArrayList<Integer> list = new ArrayList<>();
         list.addAll(Arrays.asList(arr));
 
-        FilerCriteria greaterThen3 = (x) -> x.compareTo(3) > 0;
-        ArrayList<Integer> listGreaterThen3 = filter(list, greaterThen3);
+        FilerCriteria<Integer> greaterThen3 = (x) -> x.compareTo(3) > 0;
+        MyFilter<Integer> myIntSort = new MyFilter<>();
+        ArrayList<Integer> listGreaterThen3 = myIntSort.filter(list, greaterThen3);
 
     }
-    private interface FilerCriteria {
-        boolean singleCriteria(Comparable<Object> obj);
+    private interface FilerCriteria<T extends Comparable<T>> {
+        boolean singleCriteria(Comparable<T> o);
     }
-    private static ArrayList<Object> filter(ArrayList<Comparable<Object>> obj, FilerCriteria criteria) {
-        ArrayList<Object> arr = new ArrayList<>();
-        for (int i=0; i<obj.size(); i++) {
-            if (criteria.singleCriteria(obj.get(i)))
-                arr.add(obj.get(i));
+    private static class MyFilter<T extends Comparable<T>>
+    {
+        private ArrayList<T> filter(ArrayList <T> obj, FilerCriteria<T> criteria) {
+            ArrayList<T> arr = new ArrayList<>();
+            for (int i = 0; i < obj.size(); i++) {
+                if (criteria.singleCriteria(obj.get(i)))
+                    arr.add(obj.get(i));
+            }
+            return arr;
         }
-        return arr;
-    }*/
+    }
 }
