@@ -3,10 +3,9 @@ package block2;
 import myCustomAlgorithms.SortingAlgorithms;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Pr9 {
-    private static SortingAlgorithms<Student> myIntSort = new SortingAlgorithms<>();
+    private static SortingAlgorithms<Student> myStudSort = new SortingAlgorithms<>();
 
     public static void main(String[] args) {
         task2();
@@ -18,7 +17,7 @@ public class Pr9 {
         for (int i=0; i<arr.length; i++)
             list.add(new Student(arr[i]));
 
-        list = myIntSort.insertionSort(list);
+        list = myStudSort.insertionSort(list);
 
         for (int i = 0; i < list.size(); i++)
             System.out.print(list.get(i) + " ");
@@ -30,7 +29,7 @@ public class Pr9 {
         for (int i=0; i<arr.length; i++)
             list.add(new Student(arr[i]));
 
-        list = myIntSort.quickSort(list);
+        list = myStudSort.quickSort(list);
 
         for (int i = 0; i < list.size(); i++)
             System.out.print(list.get(i) + " ");
