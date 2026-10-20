@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Pr14 {
     public static void main(String[] args) {
-        task4();
+        task8();
     }
 
     public static void task4() {

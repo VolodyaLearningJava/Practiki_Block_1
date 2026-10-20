@@ -3,6 +3,10 @@ package block2;
 import java.util.Scanner;
 
 public class Pr8 { // 14 по номеру в группе
+    public static void main(String[] args) {
+        task16();
+    }
+
     public static void task14() {
         Scanner scanner = new Scanner(System.in);
         int i;
