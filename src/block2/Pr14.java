@@ -63,7 +63,7 @@ public class Pr14 {
         System.out.println("Password accepted");
         return true;
     }
-    // С заданием 8 не справился, спросить у преподавателя
+
     public static void task8() {
         Integer[] arr = {0, 1, 0, 3, 2, 1, 10, 9, 8};
         ArrayList<Integer> list = new ArrayList<>();
@@ -72,6 +72,10 @@ public class Pr14 {
         FilerCriteria<Integer> greaterThen3 = (x) -> x.compareTo(3) > 0;
         MyFilter<Integer> myIntSort = new MyFilter<>();
         ArrayList<Integer> listGreaterThen3 = myIntSort.filter(list, greaterThen3);
+
+        for (int i=0; i<listGreaterThen3.size(); i++)
+            System.out.print(listGreaterThen3.get(i) + " ");
+        System.out.println();
 
     }
     private interface FilerCriteria<T extends Comparable<T>> {

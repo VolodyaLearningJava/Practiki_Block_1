@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Pr8 { // 14 по номеру в группе
     public static void main(String[] args) {
-        task16();
+        task15();
     }
 
     public static void task14() {
