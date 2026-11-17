@@ -72,7 +72,7 @@ public class Pr18 {
         }
     }
     public static class ThrowsDemo {
-        public static void getDetails(String key) {
+        /*public static void getDetails(String key) {
             if(key == null) {
                 try {
                     throw new NullPointerException(); // спросить
@@ -82,7 +82,7 @@ public class Pr18 {
                 }
             }
             // do something with the key
-        }
+        }*/
     }
     public class NullPointerException extends Exception {
         public NullPointerException() { super("Нет ссылки на ключ"); }
