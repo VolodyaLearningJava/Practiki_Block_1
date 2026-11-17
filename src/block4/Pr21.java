@@ -44,4 +44,27 @@ public class Pr21 {
         public void newHashMap() { map = new HashMap<>(); }
         public void newHashMap(HashMap<K, V> ma) { map = ma; }
     }
+
+    private class Calculator<T extends Number, E extends Number> {
+        public static enum CalcOperation {Add, Subtract, Multiply, Divide}
+        public double calculate(T n, CalcOperation operation, E m) {
+            double a = (double)n;
+            double b = (double)m;
+            switch (operation) {
+                case CalcOperation.Add -> { return a + b; }
+                case CalcOperation.Subtract -> { return a - b; }
+                case CalcOperation.Multiply -> { return a * b; }
+                case CalcOperation.Divide -> {
+                    try { return a / b; }
+                    catch (ArithmeticException e) { System.out.println("Zero division"); }
+                }
+            }
+            return 0;
+        }
+        public CalcOperation parseOperation(char op) {
+            try {
+
+            } catch ()
+        }
+    }
 }
